@@ -8,6 +8,8 @@ import {
   restrictedRegex,
 } from "./deps.ts";
 
+console.log('Booting api!');
+
 for await (const req of server) {
   const recievedText = decoder.decode(await Deno.readAll(req.body));
   if (recievedText.search(restrictedRegex) === -1) {

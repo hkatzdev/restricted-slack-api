@@ -15,6 +15,7 @@ for await (const req of server) {
   if (recievedText.search(restrictedRegex) === -1) {
     req.respond({ status: 204 });
   } else {
+    console.log(recievedText);
     req.respond({ status: 422, body: slackResponse, headers: jsonHeader });
   }
 }

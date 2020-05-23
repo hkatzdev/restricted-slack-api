@@ -6,7 +6,7 @@ import {
   jsonHeader,
   slackResponse,
   restrictedRegex,
-} from "./constants.ts";
+} from "./deps.ts";
 
 for await (const req of server) {
   const recievedText = decoder.decode(await Deno.readAll(req.body));

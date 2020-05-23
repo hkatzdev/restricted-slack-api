@@ -1,2 +1,2 @@
-run = "deno run --allow-env --allow-net=:8080 index.ts"
+run = "deno run --allow-env --allow-net=:8080 mod.ts"
 language = "deno"

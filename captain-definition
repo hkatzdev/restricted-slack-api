@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 2,
 	"dockerfileLines": [
-		"ADD https://www.google.com /time.now",
 		"FROM hayd/alpine-deno:1.0.1",
+		"ADD https://www.google.com /time.now",
 		"EXPOSE 8080",
 		"WORKDIR /app",
 		"USER deno",

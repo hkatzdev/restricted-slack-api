@@ -22,7 +22,7 @@ export const restrictedRegex = new RegExp(
 
 export const replacementRegex = new RegExp(
   Deno.env.get("REPLACEMENT_REGEX") || ".",
-  "gi",
+  "g",
 );
 
 export const safeString = Deno.env.get("SAFE_STRING") || "";

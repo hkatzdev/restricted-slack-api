@@ -25,4 +25,4 @@ export const logToSlack = _slackHook
         JSON.stringify(offendingText.replace(replacementRegex, safeString))
       }}`,
     })
-  : () => {};
+  : async () => {};

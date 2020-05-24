@@ -8,7 +8,7 @@
 		"COPY deps.ts .",
 		"RUN deno cache deps.ts",
 		"ADD . .",
-		"RUN deno cache main.ts",
-		"CMD [\"run\", \"--allow-env\", \"--allow-net=:8080,hooks.slack.com\", \"-c=./tsconfig.json\", \"./mod.ts\"]"
+		"RUN deno cache mod.ts",
+		"CMD [\"run\", \"--allow-env\", \"--allow-net=:8080,hooks.slack.com\", \"-c=tsconfig.json\", \"mod.ts\"]"
 	]
 }

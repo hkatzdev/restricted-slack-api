@@ -1,4 +1,4 @@
-# [Go Go Power Rangers API] (https://hackclub.slack.com/files/UCZ3KTNN6/F013X1YK6Q0/hack_club_power_rangers.jpg?origin_team=T0266FRGM&origin_channel=DL3Q1CW90)
+# [Go Go Power Rangers API](https://i.imgur.com/pZMohi6.png)
 
 There is a new bot policy which is to ~~prove deno is superior to node~~ send user requests to an API. Instructions are below, feel free to dm me or luke for help.
 

@@ -14,7 +14,7 @@ export const server = serve({ port: 8080 });
 const _slackHook = slackHook;
 
 export const logToSlack = _slackHook
-  ? (offendingText: string) =>
+  ? async (offendingText: string) =>
     fetch(_slackHook, {
       headers: jsonHeader,
       method: "POST",

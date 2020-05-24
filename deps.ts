@@ -1,23 +1,8 @@
-"use strict";
+export {
+  serve,
+} from "https://deno.land/std@0.53.0/http/server.ts";
 
-import { serve } from "https://deno.land/std@0.52.0/http/server.ts";
-
-export const server = serve({ port: 8080 });
-
-export const decoder = new TextDecoder();
-
-export const jsonHeader = new Headers({
-  "Content-Type": "application/json",
-});
-
-export const slackResponse = `
-  {
-    "response_type": "ephemeral",
-    "text": "Sorry, it appears that you tried to submit restricted commands. Please remove these commands and try again."
-  }
-`;
-
-export const restrictedRegex = new RegExp(
-  Deno.env.get("RESTRICTED_REGEX")!,
-  "i",
-);
+export {
+  encode,
+  decode,
+} from "https://deno.land/std@0.53.0/encoding/utf8.ts";

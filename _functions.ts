@@ -10,7 +10,6 @@ import {
 } from "./_constants.ts";
 
 export const server = serve({
-  hostname: "0.0.0.0",
   port: 8080,
 });
 
@@ -25,4 +24,4 @@ export const logToSlack = _slackHook
         JSON.stringify(offendingText.replace(replacementRegex, safeString))
       }}`,
     })
-  : async () => {};
+  : () => {};

@@ -9,7 +9,7 @@ export const jsonHeader = new Headers({
 export const slackResponse = encode(
   `{
   	"response_type": "ephemeral",
-  	"text": "Sorry, it appears that you tried to submit restricted commands. Please remove these commands and try again."
+  	"text": "Sorry, it appears you tried to enter restricted text. <@UM1L1C38X> is getting angry... Please try again!."
   }`,
 );
 

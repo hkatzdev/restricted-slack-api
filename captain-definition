@@ -2,10 +2,13 @@
 	"schemaVersion": 2,
 	"dockerfileLines": [
 		"FROM hayd/alpine-deno:1.0.1",
-		"ADD https://www.google.com /time.now",
 		"EXPOSE 8080",
 		"WORKDIR /app",
 		"USER deno",
-		"CMD [\"run\", \"--allow-env\", \"--allow-net=:8080,hooks.slack.com\", \"-c=tsconfig.json\", \"mod.ts\"]"
+		"COPY deps.ts .",
+		"RUN deno cache deps.ts",
+		"ADD . .",
+		"RUN deno cache main.ts",
+		"CMD [\"run\", \"--allow-env\", \"--allow-net=:8080,hooks.slack.com\", \"-c=./tsconfig.json\", \"./mod.ts\"]"
 	]
 }

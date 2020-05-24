@@ -5,11 +5,11 @@ import {
 import {
   slackHook,
   jsonHeader,
+  safeString,
+  replacementRegex,
 } from "./_constants.ts";
 
 export const server = serve({ port: 8080 });
-
-export const decoder = new TextDecoder();
 
 const _slackHook = slackHook;
 
@@ -18,6 +18,8 @@ export const logToSlack = _slackHook
     fetch(_slackHook, {
       headers: jsonHeader,
       method: "POST",
-      body: offendingText,
+      body: `{"text": ${
+        JSON.stringify(offendingText.replace(replacementRegex, safeString))
+      }}`,
     })
   : () => {};
